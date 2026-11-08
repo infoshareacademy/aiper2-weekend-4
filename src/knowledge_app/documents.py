@@ -19,5 +19,8 @@ class Document:
     def add_tag(self, tag: str) -> None:
         normalized_tag = tag.strip().lower()
 
+        if not normalized_tag:
+            raise ValueError("Tag cannot be empty")
+
         if normalized_tag not in self.tags:
             self.tags.append(normalized_tag)
