@@ -7,6 +7,7 @@ requires-python = ">=3.13"
 dependencies = [
     "black>=26.10.1",
     "ipykernel>=7.4.0",
+    "mypy>=2.4.1",
     "pre-commit>=4.7.0",
     "pytest>=9.2.0",
     "pytest-cov>=7.1.0",
@@ -23,5 +24,12 @@ source = ["knowledge_app"]
 branch = true
 
 [tool.coverage.report]
+precision = 2
 show_missing = true
 skip_covered = true
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "B", "UP"]
+
+[tool.mypy]
+check_untyped_defs = true
