@@ -1,5 +1,9 @@
 on: push
 
+env:
+  FORCE_COLOR: 1
+  PY_COLORS: 1
+
 jobs:
   test:
     runs-on: ubuntu-latest
