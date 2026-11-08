@@ -26,7 +26,7 @@ branch = true
 [tool.coverage.report]
 precision = 2
 show_missing = true
-skip_covered = true
+skip_covered = false
 
 [tool.ruff.lint]
 select = ["E4", "E7", "E9", "F", "I", "B", "UP"]
